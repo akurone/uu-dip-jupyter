@@ -1,0 +1,30 @@
+{
+    "name": "uu-dip-jupyter",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                // Jupyter
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-renderers",
+                // VS Code specific
+                "dbaeumer.vscode-eslint",
+                "EditorConfig.EditorConfig",
+                // Python specific
+                "ms-python.python",
+                // OpenCV specific
+                "did1335.opencv-intellisense",
+                "gsgupta.opencv-snippets",
+                // Markdown specific
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+				"python.defaultInterpreterPath": "/opt/venv/bin/python"
+            }
+        }
+    },
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
+}
