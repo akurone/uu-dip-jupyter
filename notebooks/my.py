@@ -2,12 +2,9 @@
 import cv2
 import matplotlib.pyplot as plt
 
-def cv2_imshow(title, img, conversion=cv2.COLOR_BGR2RGB):
+def cv2_imshow(title, img):
     plt.title(title)
-    if conversion is not None:
-        plt.imshow(cv2.cvtColor(img, conversion))
-    else:
-        plt.imshow(img)
+    plt.imshow(img, cmap='gray')
 
     plt.xticks([])
     plt.yticks([])
